@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+@keyframes animacao {
+    0% {opacity: 0;}
+    100% {width: 1;}
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+ }
+
+ html {
+    width: 100%;
+    overflow-x: hidden;
+ }
+
+ /*CORES DE FUNDO DO SITE*/
+ body,
+ .cabecalho,
+ footer {
+    background: linear-gradient(90deg, #343f54 16.62%, #5d84b7 85.61%);
+ }
+
+.cabecalho{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 12px;
+    border-bottom: 0.4px solid #FFF2E7;
+    z-index: 100;
+}  
+
+.cabecalho-imagem{
+    height: 100px;
+}
+
+.cabecalho-menu-item:hover{
+    color: #2F2325;
+}
+
+.cabecalho i{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cabecalho-menu-item{
+    font-family: 'Sarala', sans-serif;
+    color: #FFF2E7;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.cabecalho-menu-item:hover{
+    color: #2F2325;
+}
+
+/*LUPA DE PESQUISA*/
+.cabecalho i{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/*MENU MOSTRANDO SELEÇÃO / SELECIONADO*/
+.nav-menu #selecionado {
+    padding-inline: 8px;
+    padding-block: 2px;
+    border-radius: 5px;
+    background-color: #d2d0e1;
+    color: rgb(49, 24, 24);
+}
+
+.menu {
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: #FFF2E7;
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+/* INICIO DESING DO CORPO*/
+
+.dev {
+    display: flex;
+    width: 100%;
+    margin-bottom: 35px;
+    position: relative;
+    justify-content: center;
+    animation: animacao 0.3s;
+    padding-top: 100px;
+}
+
+.caixa-imagem-dev {
+    display: inline;
+    position: absolute;
+
+    width: 300px;
+}
+
+.imagem-dev {
+    width: 300px;
+    border-radius: 100px;   
+}
+
+.caixa-formacao-dev{
+    position: relative;
+    margin-top: 310px;
+    width: 50%;
+    
+    flex-direction: column;
+    padding: 12px 12px 12px 12px;
+    background-color: #5d84b7;
+    border-radius: 40px 40px 40px 40px;
+}
+
+.biografia,
+.formacoes {
+    background-color: #343f54;
+    margin-bottom: 10px;
+}
+
+.conteudo-principal-escrito-titulo{
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 64px;
+    text-shadow: 3px 3px black;
+    color: #FFF2E7 ;
+    text-align: center;
+}
+
+.conteudo-principal-escrito-subtitulo {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 30px;
+    text-shadow: 3px 3px black;
+    color: #FFF2E7 ;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.conteudo-principal-escrito-biografia {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 20px;
+    text-shadow: 3px 3px black;
+    color: #FFF2E7 ;
+    text-align: center;
+    padding-block: 8px;
+    background-color: #5b7ba4;
+}
+
+.biografia p {
+    padding: 12px;
+}
+
+.conteudo-principal-escrito-texto{
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: left;
+
+    color: #ECD6C4;
+    text-align: center;
+}
+
+.titulo-cursos {
+    font-size: 20px;
+    text-shadow: 3px 3px black;
+}
+
+.cursos li h4 {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-shadow: 3px 3px 5px black;
+}
+
+.cursos li h3 {
+    font-size: 15px;
+    color: white;
+    text-shadow:  2px 2px black;
+}
+
+.cursos-ida {
+    padding-bottom: 5px;
+    border-bottom: dotted black 1px;
+}
+
+ul {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #ECD6C4;
+    text-align: center;
+    border: 1px solid rgb(46, 52, 70);
+    margin-bottom: 10px;
+}
+
+li {
+    list-style: none;
+    font-size: 15px;
+    background-color: #5d71a4;
+    margin-bottom: 0px;
+}
+
+
+
+.rodape{
+    padding: 25px;
+    border-top: 0.4px solid #FFF2E7;
+
+ }
+
+ .rodape-imagem{
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+ }
+
+ .copy {
+    margin-top: 20px;
+    text-align: center;
+    color: #FFF2E7;
+    font-size: 1em;
+ }
+
+
+ @media (max-width:770px) { /*INICIO RESPONSIVIDADE*/
+    html body {
+        width: 100%;
+    }
+
+    body {
+        position: relative;
+        top: 20px;
+    }
+
+    body,
+    .cabecalho,
+    .nav-menu,
+    footer {
+        background: linear-gradient(90deg, #343145 16.62%, #6c6695 85.61%);
+    }
+
+    .cabecalho{
+        padding: 18px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+  
+    .menu{
+        display: block;
+    }
+    
+    .menu.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu.ativo {
+        right: 0;
+        border-radius: 0;
+        top: 155px ;
+        gap: 30px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav-menu.ativo i {
+        display: none;
+    }
+
+    .nav-menu {
+        position: fixed;
+        right: -30%;
+        top: 100px;
+        border-radius: 100px;
+        width: 10%;
+        height: 40%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0px;
+        transition: 0.5s;
+    }
+
+    .cabecalho-menu-item{
+        margin: 16px 0;
+    }
+
+    /* --------CORPO PRINCIAPL DO SITE----------- */
+
+    
+    #conteudo-formacao {
+        margin-bottom: 48px;
+        display: inline-block;
+    }
+
+    h1, h2 {
+        text-align: center;
+    }
+
+    .conteudo-principal-escrito-titulo {
+        font-size: 3em;
+    }
+
+}/*FIM RESPONSIVIDADE*/
+
+

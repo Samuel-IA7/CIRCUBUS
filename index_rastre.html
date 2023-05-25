@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rastreamento de Objeto</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DE_API"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+  <script>
+    function atualizarLocalizacao(latitude, longitude) {
+      const novaPosicao = new google.maps.LatLng(latitude, longitude);
+      marker.setPosition(novaPosicao);
+      map.setCenter(novaPosicao);
+    }
+
+    setInterval(function () {
+      // Faça uma solicitação AJAX para o servidor para obter as coordenadas atualizadas
+      // Substitua a URL e os parâmetros com os valores reais
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "http://seuservidor.com/rastreamento.php");
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onload = function () {
+        const data = JSON.parse(xhr.responseText);
+        atualizarLocalizacao(data.latitude, data.longitude);
+      };
+      xhr.send();
+    }, 5000); // atualize a cada 5 segundos
+  </script>
+</html>
